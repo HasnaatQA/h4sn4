@@ -1,0 +1,104 @@
+print('vechicle')
+class vehicle_screen:
+    def __init__(self):
+        self._make = ''
+        self._model = ''
+        self._year = 0
+        self._color = ''
+        self.mileage = 0
+
+    def add_car(self):
+        try:
+            self._make = input('Enter make of car')
+            self._model = input('Enter model of car')
+            self._year = int(input('Enter the year'))
+            self._color = input('Enter colour of the car')
+            self._mileage = int(input('Enter mileage'))
+            return True
+        except ValueError:
+            print('please enter whole numbers only for mileage and year')
+            return False
+    def __str__(self):
+        return '\t'.join(str(a) for a in [self._make, self._model, self._year, self._color, self._mileage])
+
+class Car_Inventory:
+    def __init__(self):
+        self.cars = []
+    def add_car(self):
+        vehicle = vehicle_screen()
+        if vehicle.add_car() ==True:
+            self.cars.append(vehicle)
+            print()
+            print('The vehicle has been added')
+    def Display_car_Inventory(self):
+        print('\t'.join(['', 'make', 'model', 'year', 'color', 'mileage']))
+        for idx, vehicle in enumerate(self.cars):
+            print(idx + 1, end='\t')
+            print(vehicle)
+
+inventory =Car_Inventory()
+while True:
+    print('Choice 1: Add vehicle to storage')
+    print('Choice 2: Delete vehicle from storage')
+    print('Choice 3: view current storage')
+    print('Choice 4: update vehicle in storage')
+    print('Choice 5: Export current storage')
+    print('Choice 6: Quit')
+    User_Choice=input('Enter your choice from the options: ')
+    if User_Choice== '1':
+        #add a vechicle
+        inventory.add_car()
+    elif User_Choice== '2':
+        #delete a vehicle
+        if len(inventory.cars) < 1:
+            print('No vechicles in inventory')
+            continue
+        inventory.Display_car_Inventory()
+        Products = int(input('Enter the number of vechicle you want removing: '))
+        if Products - 1 >   len(inventory.cars):
+            print('This is an invalid number')
+        else:
+            inventory.cars.remove(inventory.cars[Products - 1])
+            print_()
+            print('The vechicle has been removed')
+    elif User_Choice == '3':
+        #List all vehicles
+        if len(inventory.cars) < 1:
+            print('no vechicles in storage')
+            continue
+        inventory.Display_car_Inventory()
+    elif User_Choice == '4':
+        #edit vechicle
+        if len(inventory.cars) <1:
+            print('no vechicles in storage')
+            continue
+        inventory.Display_car_Inventory()
+        Products =int(input('please enter the number of the vechilce you want to update: '))
+        if Products -1  > len(inventory.cars):
+            print('This is an invalid number')
+        else:
+            auto_vehicle = vehicle_screen()
+            if auto_vehicle.add_car() == True :
+                inventory.cars.remove(inventory.cars[Products - 1])
+                inventory.cars.insert(Products -1, auto_vehicle)
+                print ()
+                print('The vechicle has been updated')
+    elif User_Choice == '5':
+        #export inventory to file
+        if len(inventory.cars) < 1:
+            print('no vechicles in storage')
+            continue
+        file = open('vehicle_inventory.txt', 'w')
+        file.write('\t'.join(['make', 'model', 'year', 'color', 'mileage']))
+        file.write('\n')
+        for car_v in inventory.cars:
+            file.write('%s\n' % car_v)
+        file.close()
+        print('The vechicle been exported to a file')
+    elif User_Choice == '6':
+        #exit the loop
+        print('Exit')
+        break
+    else:
+        #invalid user input
+        print('Invalid input, try again')
