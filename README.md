@@ -1,6 +1,12 @@
 # h4sn4
+#Project Aim
+To create a Crud application and the application should display tables in the database MYSQL
+#Technologies Needed and will be Used
+- Python
+- SQL Database
+- Flask
+- Gannt chart ot Kanbanboard for planning
 #Project discription
-
 My project is a car inventory systsem. The application will let a user Enter differbet atrributes of a car, such as Make of the car, model and colour. The data is then stored on a file on the Vm and linked to the database Mysql. Mysql represents the iformation saved and inpuuted from the command line terminal on python. the application is a ideal crud application as it can create, read,update and delete data.
 
 #Architecture
