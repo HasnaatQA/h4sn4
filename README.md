@@ -10,4 +10,5 @@ This print screen is a MVC diagram of my vehicle inventory system. There are two
 
 #Flowchart
 ![image](https://user-images.githubusercontent.com/79214237/111629137-dc1d4400-87e8-11eb-8a9b-23bba9eeeeb5.png)
+
 The flowchart shows the structure of the application and what factors need to be put in place for the application to be run succesfully. As shown from the diagram, the application has stages in which the user has to input in order for the application. An example of this is if the user cannot enter the colour of the car until the make of the car has been added. It is very significant that each of the devlopment is followed as shown.
