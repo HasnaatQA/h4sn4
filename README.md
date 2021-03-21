@@ -23,6 +23,7 @@ This print screen is a MVC diagram of my vehicle inventory system. There are two
 The flowchart shows the structure of the application and what factors need to be put in place for the application to be run succesfully. As shown from the diagram, the application has stages in which the user has to input in order for the application. An example of this is if the user cannot enter the colour of the car until the make of the car has been added. It is very significant that each of the devlopment is followed as shown.
 
 #Workprogress
+
 ![image](https://user-images.githubusercontent.com/79214237/111915192-eea7af80-8a6c-11eb-9380-14114e1ceb1b.png)
 
 ![image](https://user-images.githubusercontent.com/79214237/111915202-f6ffea80-8a6c-11eb-9ee6-f8c23e82673c.png)
@@ -35,7 +36,9 @@ The flowchart shows the structure of the application and what factors need to be
 
 The method and application which I used to set targets and track my progress was with the use of Trello boards, this helpmed me signficmatly as it allowed me to ogranise different tasks accordingly.
 
+
 #Build
+
 ![image](https://user-images.githubusercontent.com/79214237/111915315-80afb800-8a6d-11eb-85e0-aa37221eefc5.png)
 
 The printscreen shows the build of application. An example of the code shows the class is inventory and the while statement is being used. This suggests that the application should print whatever values are shown in the brackets, in this scenario it is adding a vehicle, deleting vehicle from storage and more.
