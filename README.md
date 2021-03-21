@@ -43,6 +43,18 @@ The method and application which I used to set targets and track my progress was
 
 The printscreen shows the build of application. An example of the code shows the class is inventory and the while statement is being used. This suggests that the application should print whatever values are shown in the brackets, in this scenario it is adding a vehicle, deleting vehicle from storage and more.
 
+
+![image](https://user-images.githubusercontent.com/79214237/111920170-7d282b00-8a85-11eb-82df-0456727995fb.png)
+
+![image](https://user-images.githubusercontent.com/79214237/111920255-d55f2d00-8a85-11eb-9b0b-3daae2c1161d.png)
+
+
+![image](https://user-images.githubusercontent.com/79214237/111920222-b8c2f500-8a85-11eb-9f3b-cfd8c19090a6.png)
+
+
+
+This printscreen shows the SQL database that has been used through GCP, It shows two tables which are Vehicles and Customers. It recorfs the data of the Vehicles inputted.
+
 #Testing
 Testing is a huge part of devoplment, It allows to see if there are any bugs in the application or if the product works as it is expected.
 
